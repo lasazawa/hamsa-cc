@@ -1,0 +1,159 @@
+/* ─── Blues ───────────────────────────────────────────────────────────── */
+:root {
+  --color-blue-100: #F4FBFF;
+  --color-blue-200-10: rgba(210,239,255,0.1);
+  --color-blue-200-25: rgba(210,239,255,0.25);
+  --color-blue-200-68: rgba(210,239,255,0.68);
+  --color-blue-200: #D2EFFF;
+  --color-blue-300: #8CDBFF;
+  --color-blue-400-7: rgba(70,200,255,0.07);
+  --color-blue-400-31: rgba(70,200,255,0.31);
+  --color-blue-400-65: rgba(70,200,255,0.65);
+  --color-blue-400: #46C8FF;
+  --color-blue-450-65: rgba(82,173,212,0.65);
+  --color-blue-500-25: rgba(57,136,209,0.25);
+  --color-blue-500: #3988D1;
+  --color-blue-600-35: rgba(0,108,207,0.35);
+  --color-blue-600-65: rgba(0,108,207,0.65);
+  --color-blue-600: #006CCF;
+  --color-blue-800-6: rgba(0,62,155,0.06);
+  --color-blue-800-25: rgba(0,62,155,0.25);
+  --color-blue-800: #003E9B;
+  --color-blue-900: #113352;
+  --color-blue-gray-825: #364950;
+  --color-blue-gray-850: #33454C;
+
+/* ─── Grays ───────────────────────────────────────────────────────────── */
+  --color-white: #FFFFFF;
+  --color-gray-0: #FFFFFF;
+  --color-gray-40: #FBFBFB;
+  --color-gray-50: #F9F9F9;
+  --color-gray-100: #F6F6F6;
+  --color-gray-110: #F2F2F2;
+  --color-gray-125: #ECECEC;
+  --color-gray-200-25: rgba(211,216,218,0.25);
+  --color-gray-200: #D3D8DA;
+  --color-gray-300: #C0C6CA;
+  --color-gray-400: #ACB2B7;
+  --color-gray-500: #879399;
+  --color-gray-600: #62747C;
+  --color-gray-650: #506269;
+  --color-gray-675: #455559;
+  --color-gray-700: #3E4F55;
+  --color-gray-750: #3A484C;
+  --color-gray-775: #39464A;
+  --color-gray-800: #354043;
+  --color-gray-825: #2D3639;
+  --color-gray-850: #202628;
+  --color-gray-875: #151A1B;
+  --color-gray-900-5: rgba(0,0,0,0.05);
+  --color-gray-900-12: rgba(0,0,0,0.12);
+  --color-gray-900-25: rgba(0,0,0,0.25);
+  --color-gray-900: #000000;
+
+/* ─── Greens ───────────────────────────────────────────────────────────── */
+--color-green-100: #EDFFEE;
+--color-green-150-32: rgba(182,254,157,0.32);
+--color-green-200: #CAFDCF;
+--color-green-250: #88FF8B;
+--color-green-400: #5ED053;
+--color-green-450: #35B46E;
+--color-green-500: #189262;
+--color-green-550: #65D383;
+--color-green-600: #138A00;
+--color-green-700-85: rgba(34,123,30,0.85);
+--color-green-800: #005C0C;
+--color-green-900: #25543C;
+
+/* ─── Oranges ───────────────────────────────────────────────────────────── */
+--color-orange-100: #FCF3DD;
+--color-orange-200: #FCD5B1;
+--color-orange-400: #FD914F;
+--color-orange-600: #E46516 ;
+--color-orange-800: #B34E00;
+--color-orange-900: #6E4222;
+
+/* ─── Purples ───────────────────────────────────────────────────────────── */
+--color-purple-100: #F6EEFF;
+--color-purple-200: #D5B8F5;
+--color-purple-400: #A682E2;
+--color-purple-600: #804CD5;
+--color-purple-800: #571BBA;
+--color-purple-900: #3A255B;
+
+/* ─── Perriwinkle ───────────────────────────────────────────────────────── */
+--color-perriwinkle-100: #ECECFB;
+--color-perriwinkle-150: #E1E3FB;
+--color-perriwinkle-200: #BFBDFE;
+--color-perriwinkle-300: #9B95FF;
+--color-perriwinkle-350: #ADA9FF;
+--color-perriwinkle-400: #6B60FF;
+--color-perriwinkle-500: #7876EB;
+--color-perriwinkle-500-35: rgba(120,118,235,0.35);
+--color-perriwinkle-600: #4133FF;
+--color-perriwinkle-800: #291CE5;
+--color-perriwinkle-800-90: rgba(58,45,144,0.85);
+
+/* ─── Reds ───────────────────────────────────────────────────────────── */
+--color-red-100: #FFEFEF;
+--color-red-200: #FFE1E1;
+--color-red-400-60: rgba(255,113,113,0.6);
+--color-red-400: #FF7171;
+--color-red-600: #C60000;
+--color-red-800: #9C0000;
+--color-red-900: #5C2728;
+
+/* ─── Gold ───────────────────────────────────────────────────────────── */
+--color-gold-100: #FFF8E1;
+--color-gold-400: #F6D919;
+--color-gold-700: #AC960B;
+--color-gold-800-68: rgba(153,125,0,0.68);
+--color-gold-800: #997D00;
+
+/* ─── Graph Colors ───────────────────────────────────────────────────────────── */
+--color-graph-gold: #CE9A01;
+--color-graph-goldlight: #ECBE36;
+--color-graph-green: #23A873;
+--color-graph-greenlight: #5AD8A6;
+--color-graph-orange: #E47156;
+--color-graph-orangebright: #FE5D03;
+--color-graph-orangelight: #FFA089;
+--color-graph-perriwinkle: #5B8FF9;
+--color-graph-perriwinklelight: #97B8FC;
+--color-graph-purple: #571BBA;
+--color-graph-purplelight: #A478EA;
+--color-graph-teal: #1FBFB3;
+--color-graph-teallight: #65EAE1;
+--color-graph-violet: #BA1B9E;
+--color-graph-violetlight: #DF84CF;
+
+/* ─── AI gradient ─────────────────────────────────────────────────────── */
+--color-ai-teal: #43ADBD;
+--color-ai-teal-hover: #7FD2DE;
+--color-ai-blue-hover: #5E9CD5;
+--color-ai-purple: #8D43A8;
+--color-ai-purple-hover: #B97FCE;
+
+/* ─── Spacing ─────────────────────────────────────────────────────────── */
+  --spacing-s0:    0px;
+  --spacing-s25:   2px;
+  --spacing-s50:   4px;
+  --spacing-s75:   6px;
+  --spacing-s100:  8px;
+  --spacing-s150:  12px;
+  --spacing-s200:  16px;
+  --spacing-s250:  20px;
+  --spacing-s300:  24px;
+  --spacing-s400:  32px;
+  --spacing-s500:  40px;
+  --spacing-s600:  48px;
+  --spacing-s700:  56px;
+  --spacing-s750:  60px;
+  --spacing-s800:  64px;
+  --spacing-s900:  72px;
+  --spacing-s1000: 80px;
+  --spacing-s1200: 96px;
+  --spacing-s1500: 120px;
+}
+
+

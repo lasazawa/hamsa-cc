@@ -1,0 +1,31 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-s75);
+  padding-block: var(--spacing-s25);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: normal;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--_color);
+  transition: color 200ms ease-in-out;
+}
+
+.link:not([aria-disabled='true']):hover  { color: var(--_color-h); }
+.link:not([aria-disabled='true']):active { color: var(--_color-a); }
+
+.link[aria-disabled='true'] {
+  color: var(--_color-d);
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Sizes */
+.link-xl { font-size: var(--font-body-xl);  }
+.link-md { font-size: var(--font-body-md);  }
+.link-sm { font-size: var(--font-body-sm);  }
+.link-xs { font-size: var(--font-body-xs);  }
+.link-xxs { font-size: var(--font-body-xxs); }

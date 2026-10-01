@@ -1,0 +1,17 @@
+/* UCL theme ─────────────────────────────────────────────────────────── */
+:root {
+  --page-bg:            var(--surface-page-bg);
+  --corners-card:       var(--spacing-s300);
+  --action-link:        var(--action-link-default);
+  --font-family-header: 'Barlow', Verdana, 'Trebuchet MS', sans-serif;
+  --font-family-body:   'Barlow', Verdana, 'Trebuchet MS', sans-serif;
+
+  /* Cards have shadows in UCL */
+  --shadow-card-default:            var(--elevation-small);
+  --shadow-card-nested-default:     var(--elevation-card-nested);
+  --shadow-card-onboarding-default: var(--elevation-card-onboarding);
+}
+
+[data-theme="dark"] {
+  --page-bg: var(--color-gray-825);
+}

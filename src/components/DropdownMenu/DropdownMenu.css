@@ -1,0 +1,86 @@
+/* Container */
+.dm {
+  background: var(--dropdown-bg);
+  border-radius: 8px;
+  box-shadow: var(--elevation-small);
+  width: 220px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section */
+.dm-section {
+  padding: var(--spacing-s200) var(--spacing-s50);
+  display: flex;
+  flex-direction: column;
+}
+
+.dm-section + .dm-section {
+  padding-top: 0;
+}
+
+.dm-section-accent {
+  background: var(--dropdown-section-accent-bg);
+  border-top: 1px solid var(--dropdown-section-accent-border);
+  padding-top: var(--spacing-s200) !important;
+  padding-bottom: var(--spacing-s300);
+}
+
+/* List of items within a section */
+.dm-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s50);
+}
+
+/* Section header label (e.g. "ACTIONS") */
+.dm-header {
+  padding: var(--spacing-s50) var(--spacing-s300);
+}
+
+.dm-header-text {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dropdown-header-text);
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Item row */
+.dm-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-s50) var(--spacing-s300);
+  border-radius: 4px;
+  gap: var(--spacing-s100);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-sm);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  color: var(--dropdown-item-text);
+  line-height: normal;
+  white-space: nowrap;
+  min-height: 26px;
+}
+
+.dm-item[role='button'] {
+  cursor: pointer;
+}
+
+.dm-item[role='button']:hover {
+  background: var(--dropdown-item-bg-hover);
+  color: var(--dropdown-item-text-hover);
+}
+
+/* Footer row (Apply + Clear) */
+.dm-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s200);
+  padding: var(--spacing-s50) var(--spacing-s300);
+  min-height: 26px;
+}

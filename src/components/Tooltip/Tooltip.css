@@ -1,0 +1,87 @@
+.tooltip {
+  --tooltip-arrow-along: 50%;
+  --tooltip-arrow-size: 10px;
+
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  filter: var(--tooltip-filter);
+}
+
+.tooltip--align-start {
+  --tooltip-arrow-along: 24%;
+}
+
+.tooltip--align-end {
+  --tooltip-arrow-along: 76%;
+}
+
+.tooltip__bubble {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-s50);
+  padding: var(--spacing-s150) var(--spacing-s200);
+  background: var(--tooltip-bg);
+  border-radius: var(--corner-input);
+}
+
+.tooltip__text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-body-md);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: normal;
+  color: var(--tooltip-text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tooltip__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--tooltip-icon);
+  line-height: 0;
+}
+
+.tooltip__arrow {
+  position: absolute;
+  z-index: 0;
+  width: var(--tooltip-arrow-size);
+  height: var(--tooltip-arrow-size);
+  background: var(--tooltip-bg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+}
+
+/* Arrow on bottom edge — points down toward anchor below */
+.tooltip--bottom .tooltip__arrow {
+  top: 100%;
+  left: var(--tooltip-arrow-along);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Arrow on top edge — points up toward anchor above */
+.tooltip--top .tooltip__arrow {
+  top: 0;
+  left: var(--tooltip-arrow-along);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Arrow on left edge — points left toward anchor */
+.tooltip--left .tooltip__arrow {
+  top: var(--tooltip-arrow-along);
+  left: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Arrow on right edge — points right toward anchor */
+.tooltip--right .tooltip__arrow {
+  top: var(--tooltip-arrow-along);
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}

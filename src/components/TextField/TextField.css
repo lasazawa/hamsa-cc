@@ -1,0 +1,219 @@
+.tf {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  min-width: 136px;
+  border-radius: var(--corner-input);
+  border: 1px solid var(--_border, var(--input-border));
+  background-color: var(--_bg, var(--input-bg));
+  color: var(--input-placeholder);
+  transition: border-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+/* Filled — dark outline/label to match typed text; hover/active stay blue */
+.tf:not(.tf-disabled):not(:hover):not(:focus-within):has(.tf-input:not(:placeholder-shown)) {
+  border-color: var(--input-text);
+}
+
+.tf:not(.tf-disabled):hover {
+  border-color: var(--_border-h, var(--input-border-hover));
+}
+
+.tf:not(.tf-disabled):focus-within {
+  border-width: 2px;
+  border-color: var(--_border-a, var(--input-border-active));
+  color: var(--input-text);
+}
+
+.tf.tf-error:not(.tf-disabled) {
+  border-color: var(--input-border-error);
+}
+
+.tf.tf-disabled {
+  border-color: var(--input-border-disabled);
+  color: var(--input-disabled-text);
+  cursor: not-allowed;
+}
+
+/* Duo left panel */
+.tf-duo-panel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s50);
+  height: 100%;
+  padding-inline: var(--spacing-s100);
+  border-right: 1px solid var(--_border, var(--input-border));
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.tf:not(.tf-disabled):not(:hover):not(:focus-within):has(.tf-input:not(:placeholder-shown)) .tf-duo-panel {
+  border-right-color: var(--input-text);
+}
+
+.tf:not(.tf-disabled):hover .tf-duo-panel {
+  border-right-color: var(--_border-h, var(--input-border-hover));
+}
+
+.tf:not(.tf-disabled):focus-within .tf-duo-panel {
+  border-right-color: var(--_border-a, var(--input-border-active));
+}
+
+.tf.tf-error:not(.tf-disabled) .tf-duo-panel {
+  border-right-color: var(--input-border-error);
+}
+
+.tf.tf-disabled .tf-duo-panel {
+  border-right-color: var(--input-border-disabled);
+  cursor: not-allowed;
+}
+
+.tf-duo-label {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-sm);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  color: var(--input-placeholder);
+  white-space: nowrap;
+  line-height: normal;
+}
+
+.tf-duo-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-s25);
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.tf-duo-clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tf-duo-clear:disabled {
+  cursor: not-allowed;
+}
+
+.tf-duo-clear .icon svg path {
+  fill: currentColor;
+}
+
+.tf-disabled .tf-duo-label {
+  color: var(--input-disabled-text);
+}
+
+.tf:not(.tf-disabled):has(.tf-input:not(:placeholder-shown)) .tf-duo-label {
+  color: var(--input-text);
+}
+
+/* Field inner row */
+.tf-inner {
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  min-width: 100px;
+  gap: var(--spacing-s100);
+  padding-inline: var(--spacing-s100);
+}
+
+/* Actual input element */
+.tf-input {
+  flex: 1 0 0;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-sm);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  color: var(--input-text);
+  line-height: normal;
+  caret-color: var(--input-text);
+}
+
+.tf-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.tf-disabled .tf-input {
+  color: var(--input-disabled-text);
+  cursor: not-allowed;
+}
+
+.tf-disabled .tf-input::placeholder {
+  color: var(--input-disabled-text);
+}
+
+/* Floating label */
+.tf-label {
+  position: absolute;
+  top: -7px;
+  left: 7px;
+  padding-inline: var(--spacing-s25);
+  background-color: var(--_bg, var(--input-bg));
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-xxxs);
+  letter-spacing: var(--font-body-letter-spacing-lg);
+  color: var(--input-label);
+  white-space: nowrap;
+  line-height: normal;
+  pointer-events: none;
+  transition: color 150ms ease-in-out;
+}
+
+.tf:not(.tf-disabled):not(:hover):not(:focus-within):has(.tf-input:not(:placeholder-shown)) .tf-label {
+  color: var(--input-text);
+}
+
+.tf:not(.tf-disabled):hover .tf-label {
+  color: var(--_border-h, var(--input-border-hover));
+}
+
+.tf:not(.tf-disabled):focus-within .tf-label {
+  color: var(--_border-a, var(--input-border-active));
+}
+
+.tf.tf-error:not(.tf-disabled) .tf-label {
+  color: var(--input-label-error);
+}
+
+.tf.tf-disabled .tf-label {
+  color: var(--input-label-disabled);
+}
+
+/* Supporting text */
+.tf-supporting {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-xs);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  color: var(--input-supporting);
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tf.tf-error:not(.tf-disabled) .tf-supporting {
+  color: var(--input-supporting-error);
+}
+
+/* Chevron icon */
+.tf-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+}

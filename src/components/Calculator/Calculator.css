@@ -1,0 +1,98 @@
+/* Always-dark calculator — forces dark semantic tokens on the subtree */
+.calculator {
+  /* Match Figma dark card surfaces regardless of page theme */
+  --surface-card-default: var(--color-gray-800);
+  --border-card-default: var(--color-gray-700);
+  --input-bg: var(--color-gray-800);
+  --input-border: var(--color-gray-400);
+  --input-border-hover: var(--color-blue-400);
+  --input-border-active: var(--color-blue-400);
+  --input-border-focus: var(--color-gray-200);
+  --input-text: var(--color-gray-100);
+  --input-placeholder: var(--color-gray-300);
+  --input-label: var(--color-gray-200);
+  --calculator-title: var(--color-gray-50);
+  --calculator-title-muted: var(--color-gray-400);
+  --calculator-elevation-nested: 0px 10px 22px 0px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 296px;
+  box-sizing: border-box;
+  overflow: clip;
+  background: var(--surface-card-default);
+  border: 1px solid var(--border-card-default);
+  border-radius: var(--corner-card);
+  box-shadow: var(--elevation-card-default);
+  color: var(--input-text);
+}
+
+.calculator__search,
+.calculator__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s300);
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-s300) var(--spacing-s500) var(--spacing-s400);
+}
+
+.calculator__search {
+  background: var(--surface-card-default);
+  border-radius: 0 0 var(--corner-card) var(--corner-card);
+  box-shadow: var(--calculator-elevation-nested);
+  position: relative;
+  z-index: 1;
+}
+
+.calculator__title {
+  margin: 0;
+  font-family: var(--font-family-header);
+  font-size: var(--font-header-card);
+  font-weight: var(--font-header-card-weight);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: normal;
+  color: var(--calculator-title);
+}
+
+.calculator__title--muted {
+  color: var(--calculator-title-muted);
+}
+
+.calculator__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s250);
+  width: 100%;
+}
+
+.calculator__search .calculator__fields {
+  padding-top: var(--spacing-s200);
+}
+
+.calculator__field {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+}
+
+.calculator__actions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.calculator__field .tf-chevron,
+.calculator__field .tf-duo-icons {
+  color: var(--input-text);
+}
+
+.calculator__field .tf-inner > .icon {
+  color: var(--input-placeholder);
+  flex-shrink: 0;
+}
+
+.calculator__field .tf-inner > .icon svg path {
+  fill: currentColor;
+}

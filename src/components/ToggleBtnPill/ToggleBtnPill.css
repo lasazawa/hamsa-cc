@@ -1,0 +1,49 @@
+.toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-s25);
+  padding: var(--spacing-s150) var(--spacing-s200) var(--spacing-s150) var(--spacing-s200);
+  border-radius: 27px;
+  border: 1px solid var(--_bc);
+  background-color: var(--_bg);
+  color: var(--_text);
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out,
+              color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.toggle-pill:hover:not(.toggle-pill--dragging) {
+  background-color: var(--_bg-h, var(--_bg));
+  border-color: var(--_bc-h, var(--_bc));
+  color: var(--_text-h, var(--_text));
+}
+
+.toggle-pill--dragging {
+  background-color: var(--_bg-d, var(--_bg));
+  border-color: var(--_bc-d, var(--_bc));
+  color: var(--_text-d, var(--_text));
+  box-shadow: var(--_shadow-d);
+  overflow: clip;
+}
+
+.toggle-pill__label {
+  font-family: var(--font-family-body);
+  font-size: var(--font-body-xxs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+.toggle-pill--unselected .toggle-pill__label {
+  font-weight: var(--font-weight-medium);
+}
+
+.toggle-pill__icon {
+  display: flex;
+  align-items: center;
+  padding-top: var(--spacing-s25);
+  flex-shrink: 0;
+}

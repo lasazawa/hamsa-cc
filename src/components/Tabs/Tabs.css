@@ -1,0 +1,108 @@
+.tabs {
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--spacing-s25);
+}
+
+.tabs--large {
+  gap: var(--spacing-s300);
+}
+
+.tabs--medium,
+.tabs--small {
+  gap: var(--spacing-s250);
+  align-items: center;
+}
+
+/* ── Individual tab ───────────────────────────────────────────────────── */
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: var(--tab-inactive);
+  flex-shrink: 0;
+}
+
+.tab--size-large {
+  gap: var(--spacing-s75);
+  height: 30px;
+}
+
+.tab--size-medium {
+  gap: var(--spacing-s75);
+  height: 24px;
+}
+
+.tab--size-small {
+  gap: var(--spacing-s50);
+  height: 22px;
+}
+
+.tab__indicator {
+  display: block;
+  width: 12px;
+  height: 0;
+  border-top: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.tab--selected {
+  color: var(--tab-active);
+}
+
+.tab--selected .tab__indicator {
+  border-top-color: var(--tab-indicator);
+}
+
+.tab__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s50);
+}
+
+.tab__label {
+  font-family: var(--font-family-body);
+  line-height: 1.29;
+  white-space: nowrap;
+}
+
+/* Size → type scale */
+.tab--size-large .tab__label {
+  font-size: var(--font-body-xxl);
+  letter-spacing: 0;
+}
+
+.tab--size-medium .tab__label {
+  font-size: var(--font-body-md);
+  letter-spacing: 0.25px;
+}
+
+.tab--size-small .tab__label {
+  font-size: var(--font-body-sm);
+  letter-spacing: 0.25px;
+}
+
+/* Weight → font weight (any size) */
+.tab--weight-medium .tab__label {
+  font-weight: var(--font-weight-medium);
+}
+
+.tab--weight-regular .tab__label {
+  font-weight: var(--font-weight-regular);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--btn-primary-focus-ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tab:hover:not(.tab--selected) {
+  color: var(--tab-hover);
+}

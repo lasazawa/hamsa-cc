@@ -1,0 +1,106 @@
+.icon-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--_bc, transparent);
+  border-radius: 50px;
+  background: var(--_bg, transparent);
+  color: var(--_icon);
+  cursor: pointer;
+  line-height: 0;
+  outline: none;
+  flex-shrink: 0;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.icon-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.icon-btn__icon .icon,
+.icon-btn__icon .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-btn__icon .icon svg path {
+  fill: currentColor;
+}
+
+/* Sizes — padding from Figma */
+.icon-btn--lg {
+  padding: var(--spacing-s150);
+}
+
+.icon-btn--md {
+  padding: 9px;
+}
+
+.icon-btn--sm {
+  padding: var(--spacing-s100);
+}
+
+.icon-btn--xs {
+  padding: var(--spacing-s75);
+}
+
+.icon-btn--ghost.icon-btn--md {
+  padding: 9px;
+}
+
+.icon-btn--ghost.icon-btn--sm,
+.icon-btn--ghost.icon-btn--xs {
+  padding: var(--spacing-s75);
+}
+
+.icon-btn--stroke.icon-btn--sm {
+  padding: var(--spacing-s75);
+}
+
+.icon-btn--stroke.icon-btn--xs {
+  padding: var(--spacing-s75);
+}
+
+.icon-btn--soft {
+  border-radius: 8px;
+}
+
+.icon-btn--soft.icon-btn--sm {
+  padding: var(--spacing-s75);
+}
+
+/* Hover / active / disabled / focus */
+.icon-btn:not(:disabled):hover {
+  background: var(--_bg-h, var(--_bg, transparent));
+  color: var(--_icon-h, var(--_icon));
+  border-color: var(--_bc-h, var(--_bc, transparent));
+}
+
+.icon-btn:not(:disabled):active {
+  background: var(--_bg-a, var(--_bg, transparent));
+  color: var(--_icon-a, var(--_icon));
+  border-color: var(--_bc-a, var(--_bc, transparent));
+}
+
+.icon-btn:disabled {
+  cursor: not-allowed;
+  background: var(--_bg-d, var(--_bg, transparent));
+  color: var(--_icon-d, var(--_icon));
+  border-color: var(--_bc-d, var(--_bc, transparent));
+}
+
+.icon-btn:focus-visible {
+  box-shadow: 0 0 0 4px var(--_ring);
+  border-color: var(--_bc-f, var(--_bc, transparent));
+}

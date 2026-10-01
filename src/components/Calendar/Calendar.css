@@ -1,0 +1,126 @@
+.calendar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 283px;
+  padding: 0 6px;
+  background: var(--calendar-bg);
+  border-radius: var(--corner-sm);
+  box-shadow: var(--calendar-shadow);
+  overflow: hidden;
+  color: var(--calendar-text);
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 9px 0 0;
+  flex-shrink: 0;
+}
+
+.calendar__month-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-s50);
+  margin: 0;
+  padding: 0 0 0 14px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-family-body);
+  font-size: var(--font-body-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: 1;
+  color: var(--calendar-text);
+}
+
+.calendar__month {
+  color: var(--calendar-text);
+}
+
+.calendar__header-year {
+  color: var(--calendar-header-year);
+}
+
+.calendar__chevron {
+  color: var(--calendar-header-year);
+  transform: rotate(180deg);
+}
+
+.calendar__years {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 54px);
+  gap: 10px;
+  height: 235px;
+  padding: 0 4px 0 11px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.calendar__years::-webkit-scrollbar {
+  width: 4px;
+}
+
+.calendar__years::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.calendar__years::-webkit-scrollbar-thumb {
+  background: var(--calendar-scrollbar);
+  border-radius: 12px;
+}
+
+.calendar__year {
+  box-sizing: border-box;
+  width: 54px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 23px;
+  background: transparent;
+  color: var(--calendar-text);
+  font-family: var(--font-family-body);
+  font-size: var(--font-body-sm);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar__year:hover {
+  background: var(--calendar-year-hover-bg);
+}
+
+.calendar__year--selected,
+.calendar__year--selected:hover {
+  border-color: var(--calendar-year-selected-border);
+  background: transparent;
+  color: var(--calendar-year-selected-text);
+}
+
+.calendar__year:focus-visible {
+  outline: 2px solid var(--calendar-year-selected-border);
+  outline-offset: 1px;
+}
+
+.calendar__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 4px 13px 7px 10px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.calendar__footer-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-s100);
+}

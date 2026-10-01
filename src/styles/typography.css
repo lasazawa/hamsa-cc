@@ -1,0 +1,89 @@
+/* Font families ─────────────────────────────────────────────────────── */
+:root {
+  --font-family-header: 'Barlow', Verdana, 'Trebuchet MS', sans-serif;
+  --font-family-body:   'Barlow', Verdana, 'Trebuchet MS', sans-serif;
+
+  /* Weights */
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* ── Headers ─────────────────────────────────────────────────────── */
+  --font-header-h1:              36px;
+  --font-header-h1-weight:       var(--font-weight-medium);
+  --font-header-h1-line-height:  40px;
+  --font-header-h1-letter-spacing: -1px;
+
+  --font-header-h2:              28px;
+  --font-header-h2-weight:       var(--font-weight-regular);
+  --font-header-h2-line-height:  32px;
+  --font-header-h2-letter-spacing: 1.2px;
+
+  --font-header-h3:              22px;
+  --font-header-h3-weight:       var(--font-weight-regular);
+  --font-header-h3-line-height:  25px;
+  --font-header-h3-letter-spacing: 1.2px;
+
+  --font-header-modal:              40px;
+  --font-header-modal-weight:       var(--font-weight-semibold);
+  --font-header-modal-line-height:  44px;
+  --font-header-modal-letter-spacing: 0px;
+
+  --font-header-stat:              32px;
+  --font-header-stat-weight:       var(--font-weight-regular);
+  --font-header-stat-line-height:  38px;
+  --font-header-stat-letter-spacing: 1.2px;
+
+  --font-header-drawer:              36px;
+  --font-header-drawer-weight:       var(--font-weight-regular);
+  --font-header-drawer-line-height:  40px;
+  --font-header-drawer-letter-spacing: 1.2px;
+
+  --font-header-card:              18px;
+  --font-header-card-weight:       var(--font-weight-medium);
+  --font-header-card-line-height:  22px;
+  --font-header-card-letter-spacing: 0.03px;
+
+  /* ── Body ───────────────────────────────────────────────────────── */
+  /* Letter spacing scales */
+  --font-body-letter-spacing-md: 0.5px;  /* used by xxs → xxl */
+  --font-body-letter-spacing-lg: 1px;    /* used by xxxs only */
+
+  /* Sizes — line-height is 120% for all body styles */
+  --font-body-line-height: 120%;
+  --font-body-xxxs: 10px;
+  --font-body-xxs:  11px;
+  --font-body-xs:   12px;
+  --font-body-sm:   13px;
+  --font-body-md:   14px;
+  --font-body-lg:   15px;
+  --font-body-xl:   16px;
+  --font-body-xxl:  18px;  /* theme-overridable: JPM uses 18px */
+
+  /* ── Eyebrows (always uppercase) ─────────────────────────────────── */
+  --font-eyebrow-sm:              12px;
+  --font-eyebrow-sm-weight:       var(--font-weight-semibold);
+  --font-eyebrow-sm-line-height:  15px;
+  --font-eyebrow-sm-letter-spacing: 1px;
+
+  --font-eyebrow-md:              12px;
+  --font-eyebrow-md-weight:       var(--font-weight-medium);
+  --font-eyebrow-md-line-height:  15px;
+  --font-eyebrow-md-letter-spacing: 1px;
+
+  --font-eyebrow-lg:              13px;
+  --font-eyebrow-lg-weight:       var(--font-weight-medium);
+  --font-eyebrow-lg-line-height:  16px;
+  --font-eyebrow-lg-letter-spacing: 1.2px;
+
+  --font-eyebrow-xl:              14px;
+  --font-eyebrow-xl-weight:       var(--font-weight-medium);
+  --font-eyebrow-xl-line-height:  16px;
+  --font-eyebrow-xl-letter-spacing: 1.5px;
+
+  --font-eyebrow-xxl:              15px;
+  --font-eyebrow-xxl-weight:       var(--font-weight-medium);
+  --font-eyebrow-xxl-line-height:  16px;
+  --font-eyebrow-xxl-letter-spacing: 1.5px;
+}

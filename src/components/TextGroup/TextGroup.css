@@ -1,0 +1,101 @@
+.text-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-s50);
+}
+
+.text-group--stacked {
+  flex-direction: column;
+}
+
+.text-group--inline {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.text-group--bold.text-group--size-large {
+  gap: var(--spacing-s100);
+}
+
+/* ── Label ────────────────────────────────────────────────────────────── */
+
+.text-group__label {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-darkest);
+  flex-shrink: 0;
+}
+
+/* medium weight + caps → Eyebrow/md */
+.text-group--medium.text-group--caps .text-group__label {
+  font-size: var(--font-eyebrow-md);
+  line-height: var(--font-eyebrow-md-line-height);
+  letter-spacing: var(--font-eyebrow-md-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* medium weight, title case → 13px medium */
+.text-group--medium:not(.text-group--caps) .text-group__label {
+  font-size: var(--font-body-sm);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: normal;
+  text-transform: none;
+}
+
+/* bold medium → 11px bold, tracking 1.2px, uppercase */
+.text-group--bold.text-group--size-medium .text-group__label {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-body-xxs);
+  letter-spacing: var(--font-eyebrow-lg-letter-spacing);
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+/* bold large → Eyebrow/md semibold, uppercase */
+.text-group--bold.text-group--size-large .text-group__label {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-eyebrow-md);
+  line-height: var(--font-eyebrow-md-line-height);
+  letter-spacing: var(--font-eyebrow-md-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* ── Value ────────────────────────────────────────────────────────────── */
+
+.text-group__value {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  color: var(--text-default);
+  line-height: normal;
+}
+
+.text-group--medium.text-group--caps .text-group__value {
+  font-size: var(--font-body-xs);
+}
+
+.text-group--medium:not(.text-group--caps) .text-group__value {
+  font-size: var(--font-body-sm);
+}
+
+.text-group--bold.text-group--size-medium .text-group__value {
+  font-size: var(--font-body-md);
+}
+
+.text-group--bold.text-group--size-large .text-group__value {
+  font-size: var(--font-body-xl);
+}
+
+/* Edit mode — cyan underline on value */
+.text-group__value--edit {
+  border-bottom: 1px solid var(--color-blue-400);
+  padding-bottom: 0;
+}
+
+/* Link value */
+.text-group--link .link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

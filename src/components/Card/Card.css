@@ -1,0 +1,16 @@
+.card {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--surface-card-default);
+  border: 1px solid var(--border-card-default);
+  border-radius: var(--corners-card, var(--corner-card));
+  box-shadow: var(--shadow-card-default, var(--elevation-card-default));
+  color: var(--text-default);
+  overflow: clip;
+}
+
+.card--padded {
+  padding: var(--bp-spacing-card-tb) var(--bp-spacing-card-lr);
+}

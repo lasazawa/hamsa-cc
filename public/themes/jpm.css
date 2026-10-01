@@ -1,0 +1,17 @@
+/* JPM theme ─────────────────────────────────────────────────────────── */
+:root {
+  --page-bg:            var(--color-gray-50);
+  --corners-card:       var(--spacing-s300);
+  --action-link:        var(--action-link-default);
+  --font-family-header: 'Barlow', Verdana, 'Trebuchet MS', sans-serif;
+  --font-family-body:   'Barlow', Verdana, 'Trebuchet MS', sans-serif;
+
+  /* Cards have no shadows in JPM */
+  --shadow-card-default:            none;
+  --shadow-card-nested-default:     none;
+  --shadow-card-onboarding-default: none;
+}
+
+[data-theme="dark"] {
+  --page-bg: var(--color-gray-825);
+}

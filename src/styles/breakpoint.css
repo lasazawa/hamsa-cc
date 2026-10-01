@@ -1,0 +1,33 @@
+/* Desktop (default) ─────────────────────────────────────────────────── */
+:root {
+  --bp-spacing-card-lr: var(--spacing-s500);  /* 40px */
+  --bp-spacing-card-tb: var(--spacing-s300);  /* 24px */
+
+  --bp-font-header-h1: var(--font-header-h1);  /* 36px */
+  --bp-font-header-h2: var(--font-header-h2);  /* 28px */
+  --bp-font-header-h3: var(--font-header-h3);  /* 22px */
+}
+
+/* Tablet ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --bp-spacing-card-lr: var(--spacing-s500);
+    --bp-spacing-card-tb: var(--spacing-s300);
+
+    --bp-font-header-h1: 28px;
+    --bp-font-header-h2: 24px;
+    --bp-font-header-h3: 20px;
+  }
+}
+
+/* Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --bp-spacing-card-lr: var(--spacing-s300);
+    --bp-spacing-card-tb: var(--spacing-s300);
+
+    --bp-font-header-h1: 24px;
+    --bp-font-header-h2: 24px;
+    --bp-font-header-h3: 18px;
+  }
+}

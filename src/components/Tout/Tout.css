@@ -1,0 +1,84 @@
+.tout {
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.tout--static {
+  display: inline-flex;
+}
+
+.tout--anchored {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.tout__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tout__trigger[role='button'] {
+  outline: none;
+}
+
+.tout__trigger[role='button']:focus-visible {
+  outline: 2px solid var(--btn-primary-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--corner-xs);
+}
+
+.tout__panel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tout-padding);
+  background: var(--tout-bg);
+  border-radius: var(--tout-radius);
+  box-shadow: var(--tout-shadow);
+  overflow: hidden;
+}
+
+.tout--anchored .tout__panel {
+  position: absolute;
+  z-index: 20;
+  width: max-content;
+}
+
+.tout--top .tout__panel {
+  bottom: calc(100% + 8px);
+  left: 50%;
+}
+
+.tout--bottom .tout__panel {
+  top: calc(100% + 8px);
+  left: 50%;
+}
+
+.tout--left .tout__panel {
+  right: calc(100% + 8px);
+  top: 50%;
+}
+
+.tout--right .tout__panel {
+  left: calc(100% + 8px);
+  top: 50%;
+}
+
+.tout__text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-body-md);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-body-letter-spacing-md);
+  line-height: normal;
+  color: var(--tout-text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tout__content {
+  display: block;
+  max-width: 100%;
+}

@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "./primitives.css";
+@import "./typography.css";
+@import "./semantic.css";
+@import "./breakpoint.css";
+
+/* Map semantic vars to Tailwind tokens ──────────────────────────────── */
+@theme inline {
+  /* Colors */
+  --color-page-bg:         var(--page-bg, var(--surface-page-bg));
+  --color-card:            var(--surface-card-default);
+  --color-card-accent:     var(--surface-card-accent);
+  --color-card-comment:    var(--surface-card-comment);
+
+  --color-btn-primary:     var(--action-btn-primary-bg-default);
+  --color-btn-primary-hover:    var(--action-btn-primary-bg-hover);
+  --color-btn-primary-active:   var(--action-btn-primary-bg-active);
+  --color-btn-primary-disabled: var(--action-btn-primary-bg-disabled);
+
+  --color-link:            var(--action-link, var(--action-link-default));
+
+  --color-border:          var(--border-default);
+  --color-border-subtle:   var(--border-subtle);
+  --color-border-strong:   var(--border-strong);
+  --color-border-card:     var(--border-card-default);
+
+  --color-text:            var(--text-default);
+  --color-text-muted:      var(--text-muted);
+  --color-text-inverted:   var(--text-inverted);
+
+  /* Spacing */
+  --spacing-card-lr: var(--bp-spacing-card-lr);
+  --spacing-card-tb: var(--bp-spacing-card-tb);
+
+  /* Typography */
+  --font-size-h1:   var(--bp-typesize-h1);
+  --font-size-h2:   var(--bp-typesize-h2);
+  --font-size-h3:   var(--bp-typesize-h3);
+  --font-size-h4:   var(--bp-typesize-h4);
+  --font-size-body: var(--bp-typesize-body);
+  --font-size-sm:   var(--bp-typesize-sm);
+
+  /* Font families */
+  --font-sans:   var(--font-family-body);
+  --font-header: var(--font-family-header);
+
+  /* Header sizes (responsive via breakpoint.css) */
+  --text-h1: var(--bp-font-header-h1);
+  --text-h2: var(--bp-font-header-h2);
+  --text-h3: var(--bp-font-header-h3);
+  --text-modal:  var(--font-header-modal);
+  --text-stat:   var(--font-header-stat);
+  --text-drawer: var(--font-header-drawer);
+  --text-card-header: var(--font-header-card);
+
+  /* Body sizes */
+  --text-body-xxxs: var(--font-body-xxxs);
+  --text-body-xxs:  var(--font-body-xxs);
+  --text-body-xs:   var(--font-body-xs);
+  --text-body-sm:   var(--font-body-sm);
+  --text-body-md:   var(--font-body-md);
+  --text-body-lg:   var(--font-body-lg);
+  --text-body-xl:   var(--font-body-xl);
+  --text-body-xxl:  var(--font-body-xxl);
+
+  /* Eyebrow sizes */
+  --text-eyebrow-sm:  var(--font-eyebrow-sm);
+  --text-eyebrow-md:  var(--font-eyebrow-md);
+  --text-eyebrow-lg:  var(--font-eyebrow-lg);
+  --text-eyebrow-xl:  var(--font-eyebrow-xl);
+  --text-eyebrow-xxl: var(--font-eyebrow-xxl);
+
+  /* Radius */
+  --radius-card: var(--corners-card, var(--spacing-s300));
+
+  /* Shadows — theme files override --shadow-card-*-default */
+  --shadow-card:                var(--shadow-card-default, var(--elevation-small));
+  --shadow-card-nested:         var(--shadow-card-nested-default, var(--elevation-card-nested));
+  --shadow-card-onboarding:     var(--shadow-card-onboarding-default, var(--elevation-card-onboarding));
+  --shadow-elevation-small:     var(--elevation-small);
+  --shadow-elevation-medium:    var(--elevation-medium);
+  --shadow-elevation-medium-DM: var(--elevation-medium-DM);
+  --shadow-drawer-right:        var(--elevation-drawer-right);
+  --shadow-drawer-left:         var(--elevation-drawer-left);
+  --shadow-drawer-nested:       var(--elevation-drawer-nested);
+}
+
+body {
+  background-color: var(--page-bg, var(--surface-page-bg));
+  color: var(--text-default);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
